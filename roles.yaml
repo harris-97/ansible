@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  roles:
+    - role: "/root/webserver-role"
+    - role: "/root/docker-role"
+
+
+#- hosts: docker
+#  become: true
+#  roles:
+#    - role: "/root/docker-role"
