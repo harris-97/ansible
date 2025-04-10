@@ -1,0 +1,13 @@
+- name: Install docker using Ansible Playbook
+  hosts: docker
+  become: true
+  tasks:
+    - name: Install docker package
+      package:
+        name: docker
+        state: present
+
+    - name: Start and enable docker service
+      service:
+        name: docker
+        state: started
