@@ -11,3 +11,13 @@
       service:
         name: docker
         state: started
+
+
+- name: Install httpd using Ansible Playbook
+  hosts: httpd
+  become: true
+  tasks:
+    - name: Install httpd package
+      package:
+        name: httpd
+        state: present
